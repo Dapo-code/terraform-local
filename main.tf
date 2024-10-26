@@ -69,7 +69,7 @@ resource "azurerm_subnet_network_security_group_association" "nsglink" {
   depends_on = [ azurerm_network_security_group.appnsg, azurerm_subnet.subnet ]
 }
 
-resource "azurerm_subnet" "subnet" {    
+resource "azurerm_subnet" "subnetB" {    
     name                 = "${terraform.workspace}SubnetB"
     resource_group_name  = azurerm_resource_group.appgrp.name
     virtual_network_name = azurerm_virtual_network.network.name
